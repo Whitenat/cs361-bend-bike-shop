@@ -4,14 +4,13 @@ class Bike
 
   STANDARD_WEIGHT = 200 # lbs
 
-  attr_reader :id, :color, :price, :weight, :luggage
+  attr_reader :id, :color, :initial_price, :weight
 
   def initialize(id, color, price, extra_items)
     @id = id
     @color = color
     @price = price
     @weight = STANDARD_WEIGHT
-    @luggage = Luggage.new(Luggage::DEFAULT_MAX_CAPACITY, extra_items, self)
   end
 
 end
